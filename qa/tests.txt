@@ -1,0 +1,135 @@
+
+> hillkings-vercel@4.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Cold import succeeds when any attempt to create/write a local directory is forbidden
+ok 1 - Cold import succeeds when any attempt to create/write a local directory is forbidden
+  ---
+  duration_ms: 88.671464
+  type: 'test'
+  ...
+# [Hillkings request] 503 O formulário e a administração ainda não foram ativados. Utilize o WhatsApp. Sua mensagem não foi enviada nem armazenada.
+# Subtest: Without cloud config, public catalogue opens; backend refuses writes without claiming receipt
+ok 2 - Without cloud config, public catalogue opens; backend refuses writes without claiming receipt
+  ---
+  duration_ms: 224.186954
+  type: 'test'
+  ...
+# Subtest: Native handler supports explicit Vercel catch-all rewrite
+ok 3 - Native handler supports explicit Vercel catch-all rewrite
+  ---
+  duration_ms: 41.116446
+  type: 'test'
+  ...
+# Subtest: Public pages and favicon routes render
+ok 4 - Public pages and favicon routes render
+  ---
+  duration_ms: 137.098227
+  type: 'test'
+  ...
+# Subtest: Catalogue uses external store and preserves corrected prices, media labels, three models, private contact
+ok 5 - Catalogue uses external store and preserves corrected prices, media labels, three models, private contact
+  ---
+  duration_ms: 20.825719
+  type: 'test'
+  ...
+# Subtest: All existing GLBs and byte ranges are unchanged and served
+ok 6 - All existing GLBs and byte ranges are unchanged and served
+  ---
+  duration_ms: 108.224389
+  type: 'test'
+  ...
+# [Hillkings cloud] GET /rest/v1/hk_settings 503 fixture-down
+# [Hillkings request] 503 Não foi possível acessar o banco ou o armazenamento. Verifique a configuração do Supabase.
+# Subtest: Known database outage does not silently serve seed prices
+ok 7 - Known database outage does not silently serve seed prices
+  ---
+  duration_ms: 13.952044
+  type: 'test'
+  ...
+# [Hillkings request] 403 Origem não autorizada. Reabra o site no endereço configurado.
+# [Hillkings request] 401 Entre para continuar.
+# Subtest: Untrusted Origin and anonymous administrative requests are rejected
+ok 8 - Untrusted Origin and anonymous administrative requests are rejected
+  ---
+  duration_ms: 9.046832
+  type: 'test'
+  ...
+# [Hillkings request] 503 Configure ADMIN_INITIAL_PASSWORD com uma senha exclusiva de pelo menos 12 caracteres. admin/admin não é permitido online.
+# Subtest: Initial administrator requires a safe environment password, not admin/admin
+ok 9 - Initial administrator requires a safe environment password, not admin/admin
+  ---
+  duration_ms: 22.059101
+  type: 'test'
+  ...
+# [Hillkings request] 428 Altere a senha inicial antes de utilizar o painel.
+# [Hillkings request] 403 Token de segurança inválido. Atualize a página.
+# [Hillkings request] 401 A sessão expirou. Entre novamente.
+# Subtest: Initial login, compulsory change, CSRF protection, session invalidation
+ok 10 - Initial login, compulsory change, CSRF protection, session invalidation
+  ---
+  duration_ms: 718.361293
+  type: 'test'
+  ...
+# [Hillkings request] 409 A peça mudou em outra sessão. Atualize.
+# Subtest: Product state writes use compare-and-set version checks
+ok 11 - Product state writes use compare-and-set version checks
+  ---
+  duration_ms: 29.90764
+  type: 'test'
+  ...
+# Subtest: A new handler server reads updates from external service rather than local files
+ok 12 - A new handler server reads updates from external service rather than local files
+  ---
+  duration_ms: 6.526132
+  type: 'test'
+  ...
+# Subtest: Create, archive, and configurable email/WhatsApp work
+ok 13 - Create, archive, and configurable email/WhatsApp work
+  ---
+  duration_ms: 61.727624
+  type: 'test'
+  ...
+# [Hillkings request] 404 Arquivo não disponível.
+# Subtest: A signed direct GLB upload is validated before becoming an available asset
+ok 14 - A signed direct GLB upload is validated before becoming an available asset
+  ---
+  duration_ms: 36.420159
+  type: 'test'
+  ...
+# [Hillkings request] 400 Envie JPEG, PNG, WebP, PDF, MP4 ou GLB.
+# [Hillkings request] 415 Formato não permitido. Use JPEG, PNG, WebP, MP4, PDF ou GLB 2.0.
+# Subtest: Invalid upload type and mismatched content are rejected
+ok 15 - Invalid upload type and mismatched content are rejected
+  ---
+  duration_ms: 29.797423
+  type: 'test'
+  ...
+# Subtest: Concierge form persists externally before email configuration, with no false sent status
+ok 16 - Concierge form persists externally before email configuration, with no false sent status
+  ---
+  duration_ms: 1071.839777
+  type: 'test'
+  ...
+# Subtest: SQL limits access to server role, includes atomic account update and private storage
+ok 17 - SQL limits access to server role, includes atomic account update and private storage
+  ---
+  duration_ms: 1.164694
+  type: 'test'
+  ...
+# Subtest: No SQLite module or data folder is in deployment code; build contains release marker
+ok 18 - No SQLite module or data folder is in deployment code; build contains release marker
+  ---
+  duration_ms: 3.588777
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2788.063431

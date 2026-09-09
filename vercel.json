@@ -1,0 +1,10 @@
+{
+ "$schema":"https://openapi.vercel.sh/vercel.json",
+ "version":2,
+ "framework":null,
+ "buildCommand":"npm run build",
+ "installCommand":"npm ci --ignore-scripts --no-audit --no-fund",
+ "outputDirectory":"dist",
+ "functions":{"api/index.mjs":{"maxDuration":60}},
+ "routes":[{"handle":"filesystem"},{"src":"/(.*)","dest":"/api/index?__hk_path=$1"}]
+}

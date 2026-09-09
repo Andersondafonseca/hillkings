@@ -4,7 +4,7 @@ const loginMarkup=root.innerHTML;
 const editor=document.getElementById('adminEditor');
 const toastElement=document.getElementById('adminToast');
 let auth=null,data=null,tab=location.hash.slice(1)||'overview',editing=null,toastTimer,uploading=false;
-const labels={available:'Disponível',reserved:'Reservada',sold:'Vendida',archived:'Arquivada',new:'Nova',read:'Em atendimento',closed:'Encerrada',queued:'Na fila de e-mail',sent:'Aceito pelo provedor',failed:'Falha no envio'};
+const labels={available:'Disponível',reserved:'Reservada',sold:'Vendida',archived:'Arquivada',new:'Nova',read:'Em atendimento',closed:'Encerrada',queued:'Na fila de e-mail',sending:'Envio em andamento',sent:'Aceito pelo provedor',failed:'Falha no envio'};
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=cents=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(cents/100);
 const date=v=>new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'short'}).format(new Date(v));
@@ -117,10 +117,17 @@ function renderMedia(){
  target.querySelectorAll('[data-remove-media]').forEach(button=>button.addEventListener('click',()=>{editing.media.splice(Number(button.dataset.removeMedia),1);renderMedia();}));
  const options=[...new Set([editing.heroImage,...editing.media.filter(m=>m.type==='image').map(m=>m.url)].filter(Boolean))];form.elements.heroImage.innerHTML='<option value="">Usar fotografia principal</option>'+options.map((v,i)=>`<option value="${escape(v)}" ${selected===v?'selected':''}>${v.includes('cutout')?'Recorte da identidade / fundo transparente':'Imagem '+(i+1)} · ${escape(v.split('/').pop())}</option>`).join('');
 }
+async function uploadDirect(file){
+ const ticket=await request('/uploads/start',{method:'POST',body:{name:file.name,size:file.size}});
+ // The URL authorises ONLY this upload; no project secret ever reaches the browser.
+ const r=await fetch(ticket.signedUrl,{method:'PUT',headers:{'Content-Type':ticket.contentType,'x-upsert':'false'},body:file,credentials:'omit'});
+ if(!r.ok)throw Error('O armazenamento não aceitou o arquivo. Confira tamanho e limite do bucket.');
+ return request('/uploads/complete',{method:'POST',body:{name:ticket.name}});
+}
 async function uploadFiles(files,purpose){
  if(!files.length||!editing)return;if(uploading){toast('Aguarde o envio atual.',true);return;}uploading=true;const form=document.getElementById('productForm'),submit=form.querySelector('button[type="submit"]');submit.disabled=true;
  try{
-  for(let i=0;i<files.length;i++){const file=files[i];toast(`Enviando arquivo ${i+1} de ${files.length}…`);const result=await request('/uploads',{method:'POST',body:file,raw:true});
+  for(let i=0;i<files.length;i++){const file=files[i];toast(`Enviando arquivo ${i+1} de ${files.length}…`);const result=await uploadDirect(file);
    if(!editing)break;
    if(purpose==='media'){if(!['image','video'].includes(result.type))throw Error('Envie uma foto ou vídeo para a galeria.');editing.media.push({url:result.url,type:result.type,kind:'original',alt:file.name.replace(/\.[^.]+$/,'')});if(!editing.heroImage&&result.type==='image')editing.heroImage=result.url;renderMedia();}
    if(purpose==='report'){if(!['image','document'].includes(result.type))throw Error('O relatório precisa ser uma imagem ou PDF.');form.elements.reportUrl.value=result.url;form.elements.reportState.value='document-provided';}
