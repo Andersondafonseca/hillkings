@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "name": "Home includes the expanded contact form",
+      "passed": true
+    },
+    {
+      "name": "No personal names in institutional copy",
+      "passed": true
+    },
+    {
+      "name": "All three collection items have report markers",
+      "passed": true
+    },
+    {
+      "name": "Favicon is embedded in the outer window",
+      "passed": true
+    },
+    {
+      "name": "Wholesale preselection",
+      "passed": true
+    },
+    {
+      "name": "Wholesale reveals company field",
+      "passed": true
+    },
+    {
+      "name": "Preview honestly says no email was sent",
+      "passed": true
+    },
+    {
+      "name": "Sourcing preselection",
+      "passed": true
+    },
+    {
+      "name": "Company field disabled when not relevant",
+      "passed": true
+    },
+    {
+      "name": "Admin shows company and destination",
+      "passed": true
+    },
+    {
+      "name": "Admin shows enquiry type",
+      "passed": true
+    },
+    {
+      "name": "No founders signature in admin",
+      "passed": true
+    },
+    {
+      "name": "Badge deep-link opens report details",
+      "passed": true
+    },
+    {
+      "name": "Correct GIA report assigned to loose Paraiba",
+      "passed": true
+    },
+    {
+      "name": "Mobile page has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Contact in the mobile menu",
+      "passed": true
+    },
+    {
+      "name": "English sourcing section present",
+      "passed": true
+    },
+    {
+      "name": "English wholesale section present",
+      "passed": true
+    },
+    {
+      "name": "English has no founders names",
+      "passed": true
+    },
+    {
+      "name": "No script error banner",
+      "passed": true
+    },
+    {
+      "name": "3D still initialises",
+      "passed": true
+    },
+    {
+      "name": "No JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "passed": 22,
+  "total": 22,
+  "errors": [],
+  "fixture_note": "Self-contained preview rendered in memory. MP4 bytes omitted only in the test fixture; delivered preview retains the original files. Browser URL navigation is restricted in this environment."
+}

@@ -1,0 +1,116 @@
+
+> hillkings-private-gemstone-house@3.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Anonymous public identity, heritage narrative and full concierge sections in both languages
+ok 1 - Anonymous public identity, heritage narrative and full concierge sections in both languages
+  ---
+  duration_ms: 112.151961
+  type: 'test'
+  ...
+# Subtest: GIA report badges are conditional and do not fabricate verification
+ok 2 - GIA report badges are conditional and do not fabricate verification
+  ---
+  duration_ms: 2.284668
+  type: 'test'
+  ...
+# Subtest: Contact form fields and all contact aliases render in both languages
+ok 3 - Contact form fields and all contact aliases render in both languages
+  ---
+  duration_ms: 7.45696
+  type: 'test'
+  ...
+# Subtest: Favicon contains four ICO sizes and manifest points to available logo images
+ok 4 - Favicon contains four ICO sizes and manifest points to available logo images
+  ---
+  duration_ms: 420.479283
+  type: 'test'
+  ...
+# Subtest: Public pages and complete admin stylesheet render
+ok 5 - Public pages and complete admin stylesheet render
+  ---
+  duration_ms: 995.355881
+  type: 'test'
+  ...
+# Subtest: All three pieces have 3D and corrected commercial prices
+ok 6 - All three pieces have 3D and corrected commercial prices
+  ---
+  duration_ms: 13.895151
+  type: 'test'
+  ...
+# Subtest: Three self-contained GLBs and two editorial covers are served
+ok 7 - Three self-contained GLBs and two editorial covers are served
+  ---
+  duration_ms: 77.695812
+  type: 'test'
+  ...
+# Subtest: Administrative writes reject untrusted origins
+ok 8 - Administrative writes reject untrusted origins
+  ---
+  duration_ms: 21.701682
+  type: 'test'
+  ...
+# Subtest: Local admin/admin forces password change before write access
+ok 9 - Local admin/admin forces password change before write access
+  ---
+  duration_ms: 1018.662979
+  type: 'test'
+  ...
+# Subtest: A sold-status edit preserves editorial provenance and 3D
+ok 10 - A sold-status edit preserves editorial provenance and 3D
+  ---
+  duration_ms: 24.948509
+  type: 'test'
+  ...
+# Subtest: New product creation and archival work
+ok 11 - New product creation and archival work
+  ---
+  duration_ms: 16.378743
+  type: 'test'
+  ...
+# Subtest: Contacts can be changed without modifying code
+ok 12 - Contacts can be changed without modifying code
+  ---
+  duration_ms: 9.010525
+  type: 'test'
+  ...
+# Subtest: Authenticated self-contained GLB upload is accepted
+ok 13 - Authenticated self-contained GLB upload is accepted
+  ---
+  duration_ms: 19.23774
+  type: 'test'
+  ...
+# Subtest: Inquiries persist without pretending to send an email
+ok 14 - Inquiries persist without pretending to send an email
+  ---
+  duration_ms: 1116.698784
+  type: 'test'
+  ...
+# Subtest: Logo favicon routes and manifest are served with correct MIME types
+ok 15 - Logo favicon routes and manifest are served with correct MIME types
+  ---
+  duration_ms: 19.681098
+  type: 'test'
+  ...
+# Subtest: Structured concierge enquiry persists for administrators
+ok 16 - Structured concierge enquiry persists for administrators
+  ---
+  duration_ms: 1067.696095
+  type: 'test'
+  ...
+# Subtest: Unrecognised enquiry type is rejected rather than persisted
+ok 17 - Unrecognised enquiry type is rejected rather than persisted
+  ---
+  duration_ms: 1074.438383
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6045.832904

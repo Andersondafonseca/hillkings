@@ -1,0 +1,22 @@
+{
+  "name": "hillkings-private-gemstone-house",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hillkings: catálogo privado, experiência WebGL 3D e administração com persistência real.",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server.mjs",
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check lib/database.mjs && node --check lib/security.mjs && node --check public/assets/app.js && node --check public/assets/admin.js && node --check public/assets/viewer.js && node --check lib/templates.mjs && node --check scripts/build-preview.mjs",
+    "admin:reset": "node --env-file-if-exists=.env scripts/reset-admin.mjs",
+    "build:viewer": "node scripts/build-viewer.mjs",
+    "build:preview": "npm run build:viewer && node scripts/build-preview.mjs",
+    "build:models": "python3 scripts/build_models_v2.py",
+    "upgrade:visuals": "node --env-file-if-exists=.env scripts/upgrade-visuals.mjs",
+    "upgrade:content": "node --env-file-if-exists=.env scripts/upgrade-content.mjs"
+  }
+}

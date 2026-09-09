@@ -1,0 +1,20 @@
+{
+  "name": "Hillkings Fine Gemstones",
+  "short_name": "Hillkings",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#08231d",
+  "theme_color": "#08231d",
+  "icons": [
+    {
+      "src": "/icons/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+(node:3683) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3694) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Simulação: 3 cadastro(s) com atualização visual.
+  HK-J001: apenas imagens, origem da mídia e modelo ilustrativo.
+  HK-G001: apenas imagens, origem da mídia e modelo ilustrativo.
+  HK-J002: apenas imagens, origem da mídia e modelo ilustrativo.
+Para aplicar, execute npm run upgrade:visuals -- --apply. Faça backup completo antes.
+
+(node:3705) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Aplicação: 3 cadastro(s) com atualização visual.
+  HK-J001: apenas imagens, origem da mídia e modelo ilustrativo.
+  HK-G001: apenas imagens, origem da mídia e modelo ilustrativo.
+  HK-J002: apenas imagens, origem da mídia e modelo ilustrativo.
+Atualização concluída. Cópia dos cadastros anteriores: /tmp/hk-upgrade-htZTIa/visual-upgrade-backup-2026-09-09T18-35-17-078Z.json
+
+(node:3716) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Aplicação: 0 cadastro(s) com atualização visual.
+
+PASS: preços/status preservados; três modelos aplicados; segunda execução sem mudanças.

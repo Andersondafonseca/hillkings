@@ -1,0 +1,9 @@
+{
+  "public/models/paraiba-necklace.glb": true,
+  "public/models/paraiba-loose.glb": true,
+  "public/models/ruby-ring.glb": true,
+  "src/viewer-engine.js": true,
+  "src/viewer-fallback.js": true,
+  "src/gem-shaders.js": true,
+  "src/viewer-common.js": true
+}

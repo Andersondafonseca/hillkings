@@ -1,0 +1,260 @@
+{
+  "environment": "Chromium, WebGL via Mesa EGL software; desktop and mobile viewport emulation, not physical iPhone",
+  "checks": [
+    {
+      "name": "Catalogue covers load without missing assets",
+      "pass": true,
+      "detail": [
+        {
+          "alt": "Anel de rubi",
+          "ok": true
+        },
+        {
+          "alt": "Turmalina Paraíba",
+          "ok": true
+        },
+        {
+          "alt": "Colar Paraíba",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "name": "Two editorial cover disclosures",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "name": "anel-rubi-9-01 actual WebGL optical shader",
+      "pass": true,
+      "detail": {
+        "renderer": "webgl-optical",
+        "canvas": {
+          "triangles": "9586",
+          "meshes": "4",
+          "refractiveMeshes": "3",
+          "maxFacetPlanes": "133",
+          "yaw": "-0.240",
+          "zoom": "4.60",
+          "light": "0",
+          "exposure": "0.95",
+          "renderCount": "1"
+        }
+      }
+    },
+    {
+      "name": "anel-rubi-9-01 rotation responds",
+      "pass": true
+    },
+    {
+      "name": "anel-rubi-9-01 zoom responds",
+      "pass": true
+    },
+    {
+      "name": "anel-rubi-9-01 warm and cool lighting",
+      "pass": true
+    },
+    {
+      "name": "anel-rubi-9-01 reset view",
+      "pass": true
+    },
+    {
+      "name": "Exposure control applied",
+      "pass": true
+    },
+    {
+      "name": "Automatic rotation advances and pauses",
+      "pass": true
+    },
+    {
+      "name": "Expanded view or native fullscreen available",
+      "pass": true,
+      "detail": {
+        "native": true,
+        "expanded": false
+      }
+    },
+    {
+      "name": "paraiba-2-09 actual WebGL optical shader",
+      "pass": true,
+      "detail": {
+        "renderer": "webgl-optical",
+        "canvas": {
+          "triangles": "142",
+          "meshes": "1",
+          "refractiveMeshes": "1",
+          "maxFacetPlanes": "133",
+          "yaw": "-0.240",
+          "zoom": "4.60",
+          "light": "0",
+          "exposure": "0.95",
+          "renderCount": "1"
+        }
+      }
+    },
+    {
+      "name": "paraiba-2-09 rotation responds",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 zoom responds",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 warm and cool lighting",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 reset view",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 actual WebGL optical shader",
+      "pass": true,
+      "detail": {
+        "renderer": "webgl-optical",
+        "canvas": {
+          "triangles": "26742",
+          "meshes": "22",
+          "refractiveMeshes": "21",
+          "maxFacetPlanes": "133",
+          "yaw": "-0.240",
+          "zoom": "4.60",
+          "light": "0",
+          "exposure": "0.95",
+          "renderCount": "1"
+        }
+      }
+    },
+    {
+      "name": "colar-paraiba-2-61 rotation responds",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 zoom responds",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 warm and cool lighting",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 reset view",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 editorial first image labelled",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 original photo distinct",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 original video plays",
+      "pass": true,
+      "detail": {
+        "paused": false,
+        "ready": 4,
+        "duration": 10.133333
+      }
+    },
+    {
+      "name": "colar-paraiba-2-61 editorial first image labelled",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 original photo distinct",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 original video plays",
+      "pass": true,
+      "detail": {
+        "paused": false,
+        "ready": 4,
+        "duration": 7.466667
+      }
+    },
+    {
+      "name": "Simulated admin login works",
+      "pass": true
+    },
+    {
+      "name": "Simulated sold change works",
+      "pass": true
+    },
+    {
+      "name": "Editor preserves editorial provenance",
+      "pass": true
+    },
+    {
+      "name": "Simulated destination email editable",
+      "pass": true
+    },
+    {
+      "name": "Sold status visible on public page",
+      "pass": true
+    },
+    {
+      "name": "Editorial after admin changes retained",
+      "pass": true
+    },
+    {
+      "name": "English product and 3D available",
+      "pass": true
+    },
+    {
+      "name": "Mobile catalogue no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "w": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "anel-rubi-9-01 mobile optical render",
+      "pass": true
+    },
+    {
+      "name": "anel-rubi-9-01 mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "w": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "paraiba-2-09 mobile optical render",
+      "pass": true
+    },
+    {
+      "name": "paraiba-2-09 mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "w": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "colar-paraiba-2-61 mobile optical render",
+      "pass": true
+    },
+    {
+      "name": "colar-paraiba-2-61 mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "w": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "No unhandled browser errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "pageErrors": [],
+  "passed": 41,
+  "total": 41
+}

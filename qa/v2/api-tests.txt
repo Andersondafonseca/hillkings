@@ -1,0 +1,74 @@
+
+> hillkings-private-gemstone-house@2.0.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Public pages and complete admin stylesheet render
+ok 1 - Public pages and complete admin stylesheet render
+  ---
+  duration_ms: 273.408148
+  type: 'test'
+  ...
+# Subtest: All three pieces have 3D and corrected commercial prices
+ok 2 - All three pieces have 3D and corrected commercial prices
+  ---
+  duration_ms: 2.562137
+  type: 'test'
+  ...
+# Subtest: Three self-contained GLBs and two editorial covers are served
+ok 3 - Three self-contained GLBs and two editorial covers are served
+  ---
+  duration_ms: 18.376319
+  type: 'test'
+  ...
+# Subtest: Administrative writes reject untrusted origins
+ok 4 - Administrative writes reject untrusted origins
+  ---
+  duration_ms: 6.998563
+  type: 'test'
+  ...
+# Subtest: Local admin/admin forces password change before write access
+ok 5 - Local admin/admin forces password change before write access
+  ---
+  duration_ms: 268.722948
+  type: 'test'
+  ...
+# Subtest: A sold-status edit preserves editorial provenance and 3D
+ok 6 - A sold-status edit preserves editorial provenance and 3D
+  ---
+  duration_ms: 8.115769
+  type: 'test'
+  ...
+# Subtest: New product creation and archival work
+ok 7 - New product creation and archival work
+  ---
+  duration_ms: 6.29488
+  type: 'test'
+  ...
+# Subtest: Contacts can be changed without modifying code
+ok 8 - Contacts can be changed without modifying code
+  ---
+  duration_ms: 3.20674
+  type: 'test'
+  ...
+# Subtest: Authenticated self-contained GLB upload is accepted
+ok 9 - Authenticated self-contained GLB upload is accepted
+  ---
+  duration_ms: 3.484148
+  type: 'test'
+  ...
+# Subtest: Inquiries persist without pretending to send an email
+ok 10 - Inquiries persist without pretending to send an email
+  ---
+  duration_ms: 1116.935099
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1866.398022
